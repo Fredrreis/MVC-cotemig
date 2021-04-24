@@ -9,7 +9,7 @@ class Pet{
 
     private $con;
 
-  //  public function __construct(){
+     public function __construct(){
        // $this->con = new PDO(SERVIDOR, USUARIO, SENHA);        
     }
     
