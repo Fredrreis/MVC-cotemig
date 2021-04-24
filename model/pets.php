@@ -1,11 +1,11 @@
 <?php
 class Pet{
     
-    private $id =;
-    private $nomeDono = $_POST["nomeproprietario"];
-    private $nomePet = $_POST["nomepet"];
-    private $tipo = $_POST["tipo"];
-    private $peso = $_POST["peso"];
+    private $id;
+    private $nomeDono;
+    private $nomePet;
+    private $tipo ;
+    private $peso ;
 
     private $con;
 
@@ -116,15 +116,21 @@ class Pet{
 
 		return $this;
 	}
-    public function getNomePet()
+    
+	/**
+	 * Get the value of id
+	 *
+	 * @return  mixed
+	 */
+	public function getPeso()
 	{
-		return $this->nomePet;
+		return $this->peso;
 	}
 
 	/**
-	 * Set the value of nome
+	 * Set the value of id
 	 *
-	 * @param   mixed  $nome  
+	 * @param   mixed  $id  
 	 *
 	 * @return  self
 	 */
@@ -134,10 +140,4 @@ class Pet{
 
 		return $this;
 	}
-
-	/**
-	 * Get the value of senha
-	 *
-	 * @return  mixed
-	 */
 }
