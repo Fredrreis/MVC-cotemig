@@ -3,9 +3,10 @@ class PetsController{
 
         public function all(){
 
-            $obj = new PetsController();
+            $obj = new Pet();
             $pets = $obj->all();
 
+            include "view/pets.php";
         }
 
 }

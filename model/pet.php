@@ -3,19 +3,19 @@ class Pet{
     
     private $id;
     private $nomeDono;
-    private $nomePet;
-    private $tipo ;
+    private $nomeAnimal;
+    private $tipoAnimal;
     private $peso ;
 
     private $con;
 
      public function __construct(){
-       // $this->con = new PDO(SERVIDOR, USUARIO, SENHA);        
+        $this->con = new PDO(SERVIDOR, USUARIO, SENHA);         
     }
     
     public function all(){
         // O MÉTOD PREPARE DA CLASS PDO ACEITA INSTRUÇÕES SQL
-        $sql = $this->con->prepare("SELECT * FROM usuario ORDER BY nome");
+        $sql = $this->con->prepare("SELECT * FROM pet");
         $sql->execute();
         $rows = $sql->fetchAll(PDO::FETCH_CLASS);
         return $rows;
@@ -74,7 +74,7 @@ class Pet{
 	 *
 	 * @return  mixed
 	 */
-	public function getNomePet()
+	public function getNomeAnimal()
 	{
 		return $this->nomePet;
 	}
@@ -86,7 +86,7 @@ class Pet{
 	 *
 	 * @return  self
 	 */
-	public function setNomePet($nomePet)
+	public function setNomeAnimal($nomePet)
 	{
 		$this->nomePet = $nomePet;
 
@@ -98,7 +98,7 @@ class Pet{
 	 *
 	 * @return  mixed
 	 */
-	public function getTipo()
+	public function getTipoAnimal()
 	{
 		return $this->tipo;
 	}
@@ -110,7 +110,7 @@ class Pet{
 	 *
 	 * @return  self
 	 */
-	public function setTipo($tipo)
+	public function setTipoAnimal($tipo)
 	{
 		$this->tipo = $tipo;
 

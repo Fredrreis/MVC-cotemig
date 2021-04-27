@@ -27,78 +27,120 @@ header {
 /*header end*/
 
 /*body*/
+
 body {
-  background: rgb(127, 226, 135);
+  background-color: #7e6157;
+  background: no-repeat right top fixed scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  height: 140vh;
   min-height: 100vh;
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url(../img/doginho.png);
 }
 
-/*main*/
 .ossoimg {
   width: 5vh;
   margin-left: 5px;
 }
 
-main {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
-}
-
-main div {
-  background-color: white;
-  height: 85vh;
-  padding: 5vh;
-  border-radius: 0.8rem 0.8rem 0.8rem 0.8rem;
-  margin-top: 7vh;
-  margin-bottom: 7vh;
-  width: 80vh;
-}
-
-.inputs {
-  margin-bottom: 3vh;
-}
-/*main end*/
-
-/*label*/
-label {
-  margin-top: 4.5vh;
-  font-size: 2.3vh;
-}
-
-button {
-  margin-top: 1vh;
-}
-
-/*label end*/
-
-/*article*/
-article {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  justify-content: center;
-  align-content: center;
-  display: flex;
-}
-/*article end*/
-
 /*section*/
 section {
-  margin-top: 30px;
-  justify-content: center;
-  align-content: center;
+  width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
 }
 
-section {
-  display: flex;
+section h3 {
+  text-align: center;
+  color: white;
 }
 /*section end*/
+
+/*table*/
+
+.divtable {
+  overflow-x: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.divtable div {
+  overflow: auto;
+  display: flex;
+  height: 100%;
+  max-width: 90%;
+  min-width: 550px;
+}
+
+.headertable {
+  background-color: #ffcc66;
+  color: #262729;
+  text-align: center;
+  font-size: 2.6vh;
+}
+
+.tables {
+  display: block;
+  height: 70vh;
+}
+
+tbody {
+  background-color: white;
+  font-size: 2.5vh;
+}
+
+td {
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #f7956a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media (max-width: 600px) {
+  .divtable {
+    justify-content: unset;
+  }
+
+  .divtable div {
+    min-width: 450px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgb(95, 94, 94);
+  }
+}
+
+/*table end*/
 
 /*footer*/
 footer {
@@ -109,6 +151,7 @@ footer {
   border-radius: 0.8rem 0.8rem 0 0;
   background-color: white;
   padding: 0.3rem;
+  margin-top: 2vh;
 }
 
 footer p {
@@ -119,14 +162,21 @@ footer p {
 /*footer end*/
 
 /*media*/
-@media (max-width: 600px) {
-  button {
-    margin-top: 0;
+@media (min-width: 600px) {
+  body {
+    height: 100vh;
   }
-}
 
-@media (min-width: 1920px) {
-  main div {
-    height: 76vh;
+  .divtable {
+    margin-top: 1rem;
+  }
+
+  .divtable div {
+    min-width: 500px;
+  }
+
+  .tables {
+    margin-top: 0.5rem;
   }
 }
+/*media ends*/
